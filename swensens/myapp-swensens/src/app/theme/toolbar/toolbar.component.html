@@ -1,0 +1,23 @@
+<mat-toolbar id="main-toolbar" class="theme-container toolbar-rd"> 
+  <div class="theme-container" fxLayout="row" fxLayoutAlign="space-between center">
+    <div class="logo">
+        <a routerLink="/" [ngClass]="{'main-toolbar-fixed': isToolbarFixed}">
+            <img src="assets/svg/logo-swensens.svg" alt="logo">
+          </a>
+    </div>
+    <div fxShow="false" fxShow.gt-xs>
+        <a routerLink="/register" *ngIf="!authService.isLoggedIn()" mat-raised-button class="btn register">{{ 'REGISTER' }}</a>
+        <a routerLink="/login" *ngIf="!authService.isLoggedIn()" mat-raised-button class="btn login">{{ 'LOGIN' }}</a>
+        <a routerLink="/products" *ngIf="authService.getUserRole() === 'admin'" mat-raised-button class="btn login">{{ 'PRODUCTS' }}</a>
+        <a (click)="onLogout()" *ngIf="authService.isLoggedIn()" mat-raised-button class="btn register">{{ 'LOGOUT' }}</a>
+    </div>   
+  </div>   
+
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <span fxHide="false" fxHide.gt-sm class="bg-menu">
+      <button mat-button (click)="sidenavToggle()">
+        <mat-icon>menu</mat-icon>
+      </button> 
+    </span>  
+  </div>
+</mat-toolbar>

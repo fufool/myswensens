@@ -1,0 +1,70 @@
+.page-banner{
+    position: relative;
+}
+
+.banner-wrapper{
+    color: #fff;
+    height: auto;
+    padding: 100px 0;
+    background-image: linear-gradient(180deg,#ff807c,#fd4b47);
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 24px;
+    .header{
+        color: inherit;
+        font-size: 24px;
+        line-height: 1.25;
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .content{
+        font-size: 20px;
+        line-height: 1.2;
+        margin-top: 24px;
+    }
+    .img-btn{
+        width: 50%;
+        margin-top: 48px;
+        a{
+            content: url('https://swensens1112.com/images/button/TH_normal.svg');
+            width: 100%;
+            height: 82px;
+        }
+        a:hover{
+            content: url('https://swensens1112.com/images/button/TH_hover.svg');
+        }
+    }
+}
+
+.img-container{
+    img{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.banner-footer{
+    background-image: url('https://swensens1112.com/images/bg-page-bottom.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 70px;
+    .container{
+        align-items: center;
+    }
+    h2{
+        font-size: 34px;
+        font-weight: 500;
+    }
+    .download{
+        img{
+            width: 30%;
+            margin: 10px 15px 0 0;
+        }
+    }
+}

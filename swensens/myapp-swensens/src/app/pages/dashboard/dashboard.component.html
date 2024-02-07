@@ -1,0 +1,50 @@
+<div class="page-wrapper">
+    <div class="text-center">
+        <h1>Delivery</h1>
+    </div>
+    
+    <!-- <div class="theme-container">
+        <div class="container">
+            <div *ngFor="let product of productList" class="m-3" fxFlex.gt-md="25" fxFlex.md="25">
+                <div class="productlist">
+                    <mat-card class="w-100">
+                        <mat-card-header>
+                            <img src="https://cdn.1112delivery.com/1112one/public/images/products/SW/652065.jpg" alt="">
+                        </mat-card-header>
+                        <mat-card-content>
+                            <h2>{{product.nameProducts}}</h2>
+                            <p>{{product.priceProducts}}</p>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <div class="theme-container">
+        <div class="container" fxLayout="column">
+            <div class="category-menu">
+                <button mat-raised-button (click)="getProduct()">All</button>
+                <button mat-raised-button (click)="filterProductsByCategory('Ice Screem Cake')">Ice Screem</button>
+                <button mat-raised-button (click)="filterProductsByCategory('Ice Screem Quart')">Ice Screem Quart</button>
+                <button mat-raised-button (click)="filterProductsByCategory('Topping')">Topping</button>
+            </div>
+            <div fxLayout="row wrap">
+                <div *ngFor="let product of filteredProductList" class="m-3" fxFlex.gt-md="25" fxFlex.md="25">
+                    <div class="productlist">
+                        <mat-card class="w-100">
+                            <mat-card-header>
+                                <img [src]="product.imageProducts" alt="">
+                            </mat-card-header>
+                            <mat-card-content>
+                                <h2>{{product.nameProducts}}</h2>
+                                <p>{{product.priceProducts}}</p>
+                            </mat-card-content>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

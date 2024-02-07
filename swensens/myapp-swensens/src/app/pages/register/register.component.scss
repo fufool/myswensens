@@ -1,0 +1,56 @@
+p{
+    margin-bottom: 0;
+}
+.section-register{
+    padding: 40px 0px;
+    .box-register{
+        max-width: 480px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: #fff;
+        
+        .box-header{
+            background-image: url('https://swensens1112.com/images/card-head.png');
+            color: #fff;
+            height: 240px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: #dbdbdb;
+            background-size: cover;
+            background-position: top;
+            .contents{
+                h2{
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+                p{
+                    font-weight: 300;
+                }
+            }
+        }
+
+        .box-body{
+            padding: 40px;
+        }
+    }
+    .register{
+        color: #fff;
+        background-color: #f04343;
+        border-color: #f04343;
+        line-height: 1.499;
+        transition: all .3s cubic-bezier(.645,.045,.355,1);
+        height: 48px;
+        padding: 0 15px;
+        font-size: 14px;
+        box-shadow: 0 2px 0 rgba(0,0,0,.015);
+        border-radius: 50px;
+        width: 100%;
+    }
+    .text-right{
+        color: #f04343;
+    }
+}

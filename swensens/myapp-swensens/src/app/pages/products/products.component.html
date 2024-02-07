@@ -1,0 +1,51 @@
+<section class="theme-container page-wrapper">
+    <div class="container my-5">
+        <div class="row clearfix">
+            <div fxFlex="100" fxFlex.gt-md="100" fxFlex.md="100" fxFlex.lt-md="100">
+              <mat-card class="p-3">
+                <div class="header">
+                  <button (click)="addProducts()" mat-raised-button class="m-3 btn add" >
+                    Add Product
+                  </button>
+                </div>
+                <div class="tableBody">
+                  <div class="table-responsive">
+                    <table class="table display product-overview mb-30" id="support_table">
+                      <thead>
+                        <tr>
+                          <th>Products ID</th>
+                          <th>Name</th>
+                          <th>Price</th>
+                          <th>Image</th>
+                          <th>Category</th>
+                          <th>Description</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody *ngFor="let product of products; let i = index">
+                        <tr>
+                          <td>{{product.id}}</td>
+                          <td>{{product.nameProducts}}</td>
+                          <td>{{product.priceProducts}}</td>
+                          <td>{{product.imageProducts}}</td>
+                          <td>{{product.category}}</td>
+                          <td>{{product.descriptionProducts}}</td>
+                          <!-- <td><img src="assets/images/user/user1.jpg" alt="" class="tbl-user-img-small">{{dataList.name_coach}}</td> -->
+                          <td class="button">
+                              <a class="tbl-action-btn mx-2" (click)="editProducts(product)">
+                                <mat-icon>edit</mat-icon>
+                              </a>
+                              <a class="tbl-action-btn mx-2" (click)="deleteProducts(product)">
+                                <mat-icon>restore_from_trash</mat-icon>
+                              </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </mat-card>
+            </div>
+          </div>
+    </div>
+</section>

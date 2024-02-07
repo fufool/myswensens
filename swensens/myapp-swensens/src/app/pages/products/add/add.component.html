@@ -1,0 +1,53 @@
+<div class="theme-container">
+    <mat-card>
+        <mat-card-header>
+            <h2>เพิ่มสินค้า</h2>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="productlist" (ngSubmit)="onSubmit()">
+                <div>
+                    <mat-form-field appearance="outline" class="w-100 mt-2">
+                        <mat-label>ชื่อสินค้า</mat-label>
+                        <input matInput formControlName="name" required>
+                        <mat-error *ngIf="productlist.controls['name'].errors?.['required']">ใส่ชื่อสินค้า</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" class="w-100 mt-2">
+                        <mat-label>ราคาสินค้า</mat-label>
+                        <input formControlName="price" matInput required>
+                        <mat-error *ngIf="productlist.controls['price'].errors?.['required']">ใส่ราคาสินค้า</mat-error>
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline" class="w-100 mt-2">
+                    <mat-label>รูปภาพ</mat-label>
+                    <input formControlName="image" matInput>
+                </mat-form-field>
+                <!-- <mat-form-field appearance="outline" class="w-100 mt-2">
+                    <mat-label>หมวดหมู่</mat-label>
+                    <input formControlName="category" matInput required>
+                    <mat-error *ngIf="productlist.controls['category'].errors?.['required']">เลือกหมวดหมู่สินค้า</mat-error>
+                </mat-form-field> -->
+
+                <mat-form-field appearance="outline" class="w-100 mt-2">
+                    <mat-label>หมวดหมู่</mat-label>
+                    <mat-select formControlName="category">
+                      <mat-option *ngFor="let category of categoryList" [value]="category">{{category}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+
+                <mat-form-field appearance="outline" class="w-100 mt-2">
+                    <mat-label>คำอธิบายสินค้า</mat-label>
+                    <input formControlName="description" matInput>
+                </mat-form-field>
+                <div appearance="outline" class="w-100 mt-2">
+                    <button class="m-2" mat-raised-button [disabled]="!productlist.valid">เพิ่มสินค้า</button>
+                </div>
+            </form>
+            <div appearance="outline" class="w-100 mt-2">
+                <button class="m-2" mat-raised-button (click)="onCancel()">ยกเลิก</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

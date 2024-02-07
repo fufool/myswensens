@@ -1,0 +1,18 @@
+<mat-sidenav-container>
+    <mat-sidenav-content class="page-wrapper" fxLayout="column" fxLayoutAlign="start stretch">
+        <header>
+            <app-toolbar></app-toolbar>
+        </header>
+          
+        <main>
+            <router-outlet></router-outlet>              
+        </main>
+    
+        <div class="sticky-footer-helper" fxFlex="grow"></div>
+    
+        <!-- <app-footer></app-footer> -->
+        <div *ngIf="showBackToTop" fxLayout="row" fxLayoutAlign="center center" class="back-to-top" (click)="scrollToTop()">
+            <mat-icon>arrow_upward</mat-icon>
+        </div>
+    </mat-sidenav-content> 
+</mat-sidenav-container>

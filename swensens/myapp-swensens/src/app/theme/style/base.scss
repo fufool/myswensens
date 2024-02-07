@@ -1,0 +1,155 @@
+$theme-max-width: 1300px;
+$font-family: "Kanit",sans-serif;
+$font-variant: tabular-nums;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    font-family: $font-family !important;
+    font-variant: $font-variant !important;
+    font-size: 14px;
+    line-height: 1.7;
+}
+p{
+    margin-bottom: 16px;
+}
+a{    
+    outline: none;
+}
+.h-100 {
+    height: 100% !important;
+}
+.h-auto {
+    height: auto !important;
+}
+.w-100{
+    width: 100% !important;
+}
+.w-90{
+    width: 90% !important;
+}
+.w-80{
+    width: 80% !important;
+}
+.w-50{
+    width: 50% !important;
+}
+.mw-100{
+    max-width: 100%;
+}
+.fw-200{
+    font-weight: 200 !important;
+}
+.fw-300{
+    font-weight: 300 !important;
+}
+.fw-400{
+    font-weight: 400 !important;
+}
+.fw-500{
+    font-weight: 500 !important;
+}
+.fw-600{
+    font-weight: 600 !important;
+}
+.fw-700{
+    font-weight: 700 !important;
+}
+
+.fw-800{
+    font-weight: 800 !important;
+}
+.d-block{
+    display: block !important;
+}
+.uppercase{
+    text-transform: uppercase !important;
+}
+.capitalize{
+    text-transform: capitalize !important;
+}
+.transition{
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    transition: 0.3s;
+}
+.text-truncate{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden !important;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}
+.text-left{
+    text-align: left;
+}
+.text-mute{
+    color :#888888
+}
+.ws-nowrap{
+    white-space: nowrap;
+} 
+.m-auto{
+    margin: 0 auto !important;
+}
+.o-hidden {
+    overflow: hidden;
+}
+
+.theme-container{
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 24px;
+}
+
+#main-toolbar{
+    position: relative;
+    transition: 0.2s;
+    z-index: 9;
+}
+
+.main-toolbar-fixed{
+    #main-toolbar{
+        // background-image: url(/assets/images/logos/logo-guze-white.png) !important;
+        // background-color: #D91414 !important;
+        .bg-menu{
+            background: #fff !important;
+        }
+    }
+}
+
+.main-toolbar-fixed{
+    #main-toolbar{
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        background: #D91414;
+        box-shadow: 0px 18px 22px 0px rgba(217, 20, 20, 0.19);
+        color: white;
+    } 
+}
+
+:root {
+    --swiper-navigation-color: #d91414;
+    --swiper-theme-color: #d91414 !important;
+  }
+
+.swiper-pagination-bullet-active {
+    background-color: #d91414 !important;
+}
