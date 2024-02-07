@@ -57,6 +57,11 @@
     .container{
         align-items: center;
     }
+    .background{
+        img{
+            width: 100%;
+        }
+    }
     h2{
         font-size: 34px;
         font-weight: 500;
@@ -65,6 +70,23 @@
         img{
             width: 30%;
             margin: 10px 15px 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .container{
+        .img-btn{
+            width: 100%;
+        }
+    }
+
+    .banner-footer{
+        padding-top: 0;
+        .download{
+            img{
+                width: 50%;
+            }
         }
     }
 }
